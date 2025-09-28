@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: How to Organize a Ramleela</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Festival Vibrance -->
+    <!-- Narrative Plan: The infographic tells the story of organizing a Ramleela by flowing from foundational steps (team, budget) to a time-based execution plan (timeline), highlighting key focus areas, and concluding with post-event tasks. This logical progression guides the user through the entire process in a visually digestible format. -->
+    <!-- Visualization Choices: 
+        - Key Roles -> Goal: Inform -> Viz: 3-column layout with Unicode icons -> Justification: Simple, clear visual separation -> Method: HTML/CSS (NO SVG).
+        - Budget -> Goal: Compare -> Viz: Donut Chart -> Justification: Ideal for showing part-to-whole relationships in finances -> Library: Chart.js/Canvas (NO SVG).
+        - Timeline -> Goal: Change -> Viz: Vertical timeline -> Justification: Clearly shows chronological progression of tasks -> Method: HTML/CSS (NO SVG).
+        - Focus Areas -> Goal: Organize -> Viz: Icon-based grid -> Justification: Modern, scannable way to present key categories -> Method: HTML/CSS (NO SVG).
+        -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFBEB;
+            color: #334155;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 4px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #F97316;
+            border: 4px solid #FFFBEB;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <header class="text-center my-8 md:my-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#4338CA] mb-4">Bringing an Epic to Life</h1>
+            <p class="text-xl md:text-2xl text-slate-600">A Visual Guide to Organizing a Ramleela</p>
+        </header>
+
+        <section class="mb-16 md:mb-24">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#4338CA]">The Foundation: Your Core Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="text-5xl mb-4">🎭</div>
+                    <h3 class="text-xl font-bold text-slate-800">The Director</h3>
+                    <p class="text-slate-500 mt-2">The imaginative leader. They craft the vision, direct the performers, and bring the narrative to life.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="text-5xl mb-4">💼</div>
+                    <h3 class="text-xl font-bold text-slate-800">The Manager</h3>
+                    <p class="text-slate-500 mt-2">The core of operations, managing logistics, budgets, venues, and ensuring seamless production flow.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold text-slate-800">The Treasurer</h3>
+                    <p class="text-slate-500 mt-2">The budget guardian. They oversee fundraising, monitor spending, and keep the project financially stable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 md:mb-24 bg-white rounded-lg shadow-xl p-6 md:p-10">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-[#4338CA] mb-4">The Blueprint: Budgeting for Success</h2>
+                    <p class="text-slate-600 mb-4">A well-executed Ramleela hinges on meticulous financial planning. A detailed budget guarantees every element, from sets to costumes, is adequately funded. This diagram showcases a standard fund distribution.</p>
+                    <p class="text-slate-500 text-sm">Manage funds carefully to avoid last-minute gaps and bring your creative vision to life. Focus on key aspects like venue and artist payments first.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="budgetChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 md:mb-24">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#4338CA]">The Countdown: Timeline to Performance</h2>
+            <div class="relative pl-10 border-l-4 border-orange-500">
+                <div class="mb-12 relative timeline-item">
+                    <h4 class="font-bold text-xl text-slate-800">3 Months Out: Foundation</h4>
+                    <p class="text-slate-500">Complete script and score. Conduct auditions and assign roles. Secure venue and essential crew.</p>
+                </div>
+                <div class="mb-12 relative timeline-item">
+                    <h4 class="font-bold text-xl text-slate-800">2 Months Out: Creation</h4>
+                    <p class="text-slate-500">Start rehearsals. Begin set design and construction. Gather fabrics and craft costumes.</p>
+                </div>
+                <div class="mb-12 relative timeline-item">
+                    <h4 class="font-bold text-xl text-slate-800">1 Month Out: Promotion</h4>
+                    <p class="text-slate-500">Run ad campaigns. Design posters and flyers. Boost social media activity and connect with local press.</p>
+                </div>
+                <div class="mb-12 relative timeline-item">
+                    <h4 class="font-bold text-xl text-slate-800">2 Weeks Out: Integration</h4>
+                    <p class="text-slate-500">Start stage rehearsals, blending lighting, sound, sets, and costumes with the show.</p>
+                </div>
+                <div class="relative timeline-item">
+                    <h4 class="font-bold text-xl text-slate-800">Show Week: Final Polish</h4>
+                    <p class="text-slate-500">Run complete dress rehearsals. Finalize adjustments. Ready front-of-house and volunteers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 md:mb-24">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#4338CA]">Pillars of Production</h2>
+            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">Outside the main timeline, these critical aspects demand ongoing focus during production to deliver a top-tier and well-received performance.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="text-4xl mr-5">🎤</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800">Casting & Rehearsals</h3>
+                        <p class="text-slate-500 mt-1">Focused practice drives stellar performances. Cultivate teamwork among your actors.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="text-4xl mr-5">🎨</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800">Set & Costume Design</h3>
+                        <p class="text-slate-500 mt-1">Imagery captivates the audience. Craft a stage world with intentional design that echoes the epic's majesty.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="text-4xl mr-5">📢</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800">Marketing & Outreach</h3>
+                        <p class="text-slate-500 mt-1">A successful event thrives on its crowd. Rally the community ahead of time and spark interest across multiple platforms.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+                    <div class="text-4xl mr-5">🙏</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800">Volunteer Management</h3>
+                        <p class="text-slate-500 mt-1">Assemble a dedicated team of volunteers. Define roles clearly and maintain open communication for a productive, happy group.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center my-8 md:my-16 border-t-2 border-slate-200 pt-8">
+            <p class="text-slate-600">Through thoughtful preparation and united effort, your Ramleela can thrive, preserving a cherished tradition.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const processLabel = (label) => {
+                if (label.length <= 16) return label;
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > 16) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine) lines.push(currentLine.trim());
+                return lines;
+            };
+
+            const budgetLabelsRaw = ['Venue & Stage', 'Costumes & Makeup', 'Artists & Crew', 'Sound & Lighting', 'Marketing', 'Miscellaneous'];
+            const budgetLabels = budgetLabelsRaw.map(processLabel);
+
+            const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+            const budgetChart = new Chart(budgetCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: budgetLabels,
+                    datasets: [{
+                        label: 'Budget Allocation',
+                        data: [25, 20, 20, 15, 10, 10],
+                        backgroundColor: [
+                            '#4338CA', 
+                            '#F97316', 
+                            '#FBBF24', 
+                            '#60A5FA', 
+                            '#818CF8', 
+                            '#FB923C'  
+                        ],
+                        borderColor: '#FFFFFF',
+                        borderWidth: 4,
+                        hoverOffset: 15
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                color: '#334155',
+                                font: {
+                                    family: "'Inter', sans-serif",
+                                    size: 14,
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    } else {
+                                      return label;
+                                    }
+                                },
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

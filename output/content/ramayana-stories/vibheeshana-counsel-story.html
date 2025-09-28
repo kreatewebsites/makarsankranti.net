@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibheeshana’s Counsel: A Brother's Righteous Choice</title>
+    <meta name="description" content="The Ramayana story of Vibhishana, Ravana's righteous brother, who abandons Lanka to join Lord Rama's side after his counsel for peace and dharma is rejected.">
+    <meta name="keywords" content="Vibhishana, Ravana, Rama, Ramayana, Dharma, counsel, defection, Lanka, Hindu mythology, Vibheeshana">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #4B5563; 
+        }
+        .font-sanskrit {
+            font-family: 'Tiro Devanagari Sanskrit', serif;
+        }
+        .tab-active {
+            border-color: #D97706;
+            background-color: #FFFBEB;
+            color: #D97706;
+        }
+        .step-item-active {
+            background-color: #D97706;
+            color: #FFFFFF;
+            transform: scale(1.1);
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: This page narrates a story of moral conviction and is structured to highlight the central conflict of Dharma vs. Adharma. 1) The Council of War sets the scene in a tense Lanka. 2) A Brother's Plea is an interactive section using tabs to contrast the arrogant counsel of Ravana's sycophants with Vibhishana's righteous plea. 3) The Breaking Point uses a step-based interactive diagram to dramatize the final confrontation and Vibhishana's public humiliation and departure. 4) Refuge in Dharma details his arrival at Rama's camp, using tabs to show the conflict between Sugriva's suspicion and Rama's profound policy of unconditional refuge. This structure effectively portrays the story as a clash of ideologies, culminating in a powerful statement on righteousness. -->
+    <!-- Visualization & Content Choices: Report Info: The conflicting advice given to Ravana -> Goal: Compare/Contrast Ideologies -> Viz/Method: Tabbed content -> Interaction: Tabs for "Counsel of War" and "Counsel of Dharma" -> Justification: This clearly separates the two opposing viewpoints within Ravana's court, making the central conflict immediately understandable. | Report Info: Vibhishana's departure from court -> Goal: Show a Dramatic Sequence -> Viz/Method: Step-based diagram -> Interaction: Click steps for The Final Plea, The Insult, and The Renunciation -> Justification: This breaks down the highly emotional climax of the story into a powerful, linear narrative. | Report Info: The debate in Rama's camp -> Goal: Compare/Contrast Leadership -> Viz/Method: Tabbed content -> Interaction: Tabs for "A Spy's Welcome?" (Sugriva's view) and "A Vow of Refuge" (Rama's view) -> Justification: This effectively contrasts pragmatic military strategy with Rama's unwavering adherence to Dharma, showcasing his divine character. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="text-stone-800">
+
+    <header class="bg-amber-100/30 sticky top-0 z-50 backdrop-blur-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="font-sanskrit text-2xl font-bold text-amber-800">विभीषण-शरणम्</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#council" class="text-stone-600 hover:text-amber-700 transition">The Council</a>
+                    <a href="#plea" class="text-stone-600 hover:text-amber-700 transition">The Plea</a>
+                    <a href="#rejection" class="text-stone-600 hover:text-amber-700 transition">The Rejection</a>
+                    <a href="#refuge" class="text-stone-600 hover:text-amber-700 transition">The Refuge</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="council" class="text-center my-12 md:my-20">
+            <h1 class="font-sanskrit text-5xl md:text-7xl font-bold text-amber-900 leading-tight">A Kingdom Divided</h1>
+            <p class="mt-4 text-xl md:text-2xl text-stone-600">The Choice Between Pride and Dharma</p>
+            <p class="mt-6 max-w-3xl mx-auto text-stone-500">
+                After Hanuman's fierce assault on Lanka, Ravana experienced a rare moment of dread. He gathered his ministers and generals to plan the next move. While the court, consumed by pride, urged total war, one dissenting voice emerged—that of his younger brother, Vibhishana.
+            </p>
+        </section>
+
+        <section id="plea" class="my-16 md:my-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-800 mb-2">A Plea for Righteousness</h2>
+            <p class="text-center text-stone-600 mb-12 max-w-3xl mx-auto">Vibhishana, steadfast in righteousness, foresaw his brother's downfall and urged Ravana to prevent the looming disaster.</p>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="flex border-b border-stone-300 mb-6">
+                    <button class="tab-button tab-active flex-1 text-center font-semibold p-3 border-b-2 transition" data-tab="dharma">The Counsel of Dharma</button>
+                    <button class="tab-button flex-1 text-center font-semibold p-3 border-b-2 border-transparent text-stone-500 transition" data-tab="adharma">The Counsel of Pride</button>
+                </div>
+                <div id="tab-content-plea">
+                    <div id="dharma-content" class="tab-pane">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-3">Vibhishana's Argument</h3>
+                        <p class="text-stone-600">"Brother, your actions are gravely unjust," Vibhishana warned. "Taking another's wife defies all principles of dharma. Rama is no ordinary man; one of his envoys reduced our city to ashes. Think of the might of his entire army! The righteous choice is evident—restore Sita respectfully, seek his pardon, and protect our kingdom and lineage from ruin."</p>
+                    </div>
+                    <div id="adharma-content" class="hidden tab-pane">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-3">Ravana's Court Responds</h3>
+                        <p class="text-stone-600">The other ministers, Indrajit among them, scoffed at Vibhishana’s warning. "Why fear two mortal ascetics and their monkey horde?" they jeered. "You’re spineless, Vibhishana! Ravana rules the three worlds. Let us strike them down!" Their arrogant boasts only fueled Ravana’s own overconfidence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rejection" class="my-16 md:my-24 py-12 bg-amber-50/50 rounded-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-800 mb-2">The Breaking Point</h2>
+            <p class="text-center text-stone-600 mb-12 max-w-3xl mx-auto">Disregarding his brother's advice, Ravana openly shamed Vibhishana. This ultimate affront shattered their familial ties, compelling Vibhishana to make a decision that altered the war's fate.</p>
+            
+            <div>
+                <div class="flex flex-col md:flex-row justify-center items-center md:space-x-4 mb-6">
+                    <button class="step-item step-item-active w-full md:w-auto px-4 h-16 rounded-lg font-bold transition duration-300 mb-2 md:mb-0" data-step="1">1. The Final Plea</button>
+                    <div class="hidden md:block w-12 h-0.5 bg-stone-300"></div>
+                    <button class="step-item w-full md:w-auto px-4 h-16 rounded-lg font-bold transition duration-300 bg-white mb-2 md:mb-0" data-step="2">2. The Insult</button>
+                    <div class="hidden md:block w-12 h-0.5 bg-stone-300"></div>
+                    <button class="step-item w-full md:w-auto px-4 h-16 rounded-lg font-bold transition duration-300 bg-white" data-step="3">3. The Renunciation</button>
+                </div>
+
+                <div id="step-details-rejection" class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md min-h-[150px]">
+                    <h4 id="step-title-rejection" class="font-bold text-xl text-amber-700 mb-2">Step 1: The Final Plea</h4>
+                    <p id="step-description-rejection" class="text-stone-600">In a final plea, Vibhishana knelt before Ravana. "I speak not out of fear but out of love for you and our kin! I beg you, heed wisdom before it's too late!"</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="refuge" class="my-16 md:my-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-800 mb-2">Refuge in Dharma</h2>
+            <p class="text-center text-stone-600 mb-12 max-w-3xl mx-auto">Vibhishana, with his four trusted ministers, soared through the skies and arrived at Rama's camp, seeking refuge. His presence sparked unease, as many Vanara chiefs doubted his intentions.</p>
+            
+             <div class="max-w-3xl mx-auto">
+                <div class="flex border-b border-stone-300 mb-6">
+                    <button class="tab-button-refuge tab-active flex-1 text-center font-semibold p-3 border-b-2 transition" data-tab="suspicion">A Spy's Welcome?</button>
+                    <button class="tab-button-refuge flex-1 text-center font-semibold p-3 border-b-2 border-transparent text-stone-500 transition" data-tab="acceptance">A Vow of Refuge</button>
+                </div>
+                <div id="tab-content-refuge">
+                    <div id="suspicion-content" class="tab-pane">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-3">Sugriva's Suspicion</h3>
+                        <p class="text-stone-600">"Lord Rama, this is undoubtedly a trap," argued Sugriva, the Vanara king. "He is the enemy's brother, sent to deceive us and uncover our plans. We cannot afford to trust him. He must be captured or eliminated." Most of the other leaders supported this cautious and pragmatic stance.</p>
+                    </div>
+                    <div id="acceptance-content" class="hidden tab-pane">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-3">Rama's Vow</h3>
+                        <p class="text-stone-600">But Rama, upholding Dharma, silenced their protests. "My duty is to protect anyone seeking refuge, even Ravana himself," he proclaimed. "Vibhishana has forsaken his unrighteous brother for the path of virtue. He is no spy but a true devotee. We shall embrace him." Thus, Rama accepted Vibhishana and ceremonially anointed him as Lanka’s future king, cementing their bond.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-100 mt-20">
+        <div class="container mx-auto px-6 py-8 text-center text-stone-500">
+            <p>A dynamic retelling of Vibhishana's decision to renounce sin and embrace virtue.</p>
+            <p class="text-sm mt-2">Inspired by the epic Ramayana.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Plea Tabs
+            const pleaTabButtons = document.querySelectorAll('#plea .tab-button');
+            const pleaTabPanes = document.querySelectorAll('#plea .tab-pane');
+
+            pleaTabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    pleaTabButtons.forEach(btn => btn.classList.remove('tab-active'));
+                    button.classList.add('tab-active');
+
+                    const tab = button.dataset.tab;
+                    pleaTabPanes.forEach(pane => {
+                        if (pane.id === `${tab}-content`) {
+                            pane.classList.remove('hidden');
+                        } else {
+                            pane.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // Rejection Steps
+            const rejectionStepData = {
+                1: { title: 'Step 1: The Final Plea', description: 'Making one last attempt, Vibhishana fell at Ravana\'s feet. "I speak not from fear, but from love for you and our family! Please, listen to reason before it is too late!"' },
+                2: { title: 'Step 2: The Insult', description: 'Enraged, Ravana kicked Vibhishana. "Traitor!" he screamed. "You are a disgrace to our family, praising my enemy in my own court! You are no longer my brother. Death would be a fitting punishment for such treason!"' },
+                3: { title: 'Step 3: The Renunciation', description: '"A king who is a slave to his passions is no true brother," Vibhishana replied, rising with dignity. "I have tried to guide you, but you choose the path of destruction. I renounce you and your kingdom. I will seek refuge with Rama, the protector of Dharma."' }
+            };
+
+            const rejectionStepItems = document.querySelectorAll('#rejection .step-item');
+            const rejectionStepTitle = document.getElementById('step-title-rejection');
+            const rejectionStepDescription = document.getElementById('step-description-rejection');
+
+            rejectionStepItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    rejectionStepItems.forEach(i => i.classList.remove('step-item-active', 'bg-white'));
+                    rejectionStepItems.forEach(i => {
+                        if (i !== item) i.classList.add('bg-white');
+                    });
+                    item.classList.add('step-item-active');
+                    item.classList.remove('bg-white');
+
+                    const step = item.dataset.step;
+                    rejectionStepTitle.textContent = rejectionStepData[step].title;
+                    rejectionStepDescription.textContent = rejectionStepData[step].description;
+                });
+            });
+            
+            // Refuge Tabs
+            const refugeTabButtons = document.querySelectorAll('#refuge .tab-button-refuge');
+            const refugeTabPanes = document.querySelectorAll('#refuge .tab-pane');
+
+            refugeTabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    refugeTabButtons.forEach(btn => btn.classList.remove('tab-active'));
+                    button.classList.add('tab-active');
+
+                    const tab = button.dataset.tab;
+                    refugeTabPanes.forEach(pane => {
+                        if (pane.id === `${tab}-content`) {
+                            pane.classList.remove('hidden');
+                        } else {
+                            pane.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+            
+            // Smooth scroll for nav links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
